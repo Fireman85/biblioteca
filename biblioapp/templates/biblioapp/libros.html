@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+    <p>Aquí van todos los libros</p>
+
+    <ul>
+        {% for libro in libros %}
+
+            <li><a href="{{ libro.get_absolute_url }} ">{{ libro }}</a></li>
+
+        {% endfor %}
+
+    </ul>
+
+
+    <form action="{% url 'nuevo_libro' %}" method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button>Enviar</button>
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Biblioteca</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Biblioteca mefir</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}"> Inicio </a></li>
+                <li><a href="{% url 'muestra_libros' %}"> Libros </a></li>
+                <li><a href="#"> Ejemplar </a></li>
+                <li><a href="#"> Prestamos </a></li>
+
+                <li><a href="#"> Reporte de libros prestados </a></li>
+                <li><a href="#"> Iniciar sesión </a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+        {% block main %}
+
+
+
+        {% endblock %}
+
+    </main>
+
+    <p>
+        Datos de mi biblioteca
+    </p>
+
+</body>
+</html>
